@@ -1,4 +1,3 @@
-#pip install h2o
 import h2o
 from h2o.automl import H2OAutoML
 
@@ -17,8 +16,14 @@ aml = H2OAutoML(max_models=20, seed=1)
 aml.train(x=train.columns, y=y, training_frame=train)
 
 # Leaderboard de los modelos
+print("modelos")
 lb = aml.leaderboard
 lb.head(rows=5)
 
+print(lb.head(rows=5))
+
+print("prediccion")
 # Hacer predicciones con el mejor modelo
 predictions = aml.leader.predict(test)
+
+print(predictions)
