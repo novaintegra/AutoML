@@ -1,3 +1,4 @@
+#pip install h2o
 import h2o
 from h2o.automl import H2OAutoML
 
